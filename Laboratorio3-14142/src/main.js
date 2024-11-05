@@ -1,9 +1,4 @@
 let idCodes=[];
-const menuDesplegable= document.querySelector('.menu desplegable')
-menuDesplegable.addEventListener('click',()=>
-{
-    menuDesplegable.classList.toggle("click");
-})
 function tablaProductos()
 {
 
@@ -70,18 +65,7 @@ function Alta()
         .then(data => console.log(data))
         .catch(error => console.error('Error:', error));
 }
-function formularioEdicion()
-{
-    fetch('https://api.yumserver.com/14142/generic/clientes')
-    .then(response => response.json())
-    .then(data => {
-        mostrarDatos(data);
-    })
-    .catch(error => console.error('Error:', error));
 
-
-
-}
 function modificarProducto()
 {
     document.body.innerHTML+=
